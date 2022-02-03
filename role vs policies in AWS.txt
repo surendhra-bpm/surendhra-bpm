@@ -1,0 +1,40 @@
+Role Vs Policy
+--------------
+IAM roles define the set of permissions for making AWS service request whereas IAM policies define the permissions that you will require. 
+IAM roles are like users and policies are like permissions.
+
+
+How can I find out which user launched an EC2 instance in my account?
+-------------------------------------------------------------------------
+
+I want to identify the user that launched an Amazon Elastic Compute Cloud (Amazon EC2) instance in my account. How can I view this information? 
+
+Resolution
+AWS CloudTrail allows you to view the last 90 days of recorded API activity and events in an Amazon Web Services (AWS) Region. When viewing your CloudTrail event history, you can apply one attribute filter and a time range filter to narrow the results.
+
+Before you begin, identify the instance ID for the instance that you want to investigate. Follow these steps:
+
+Open the Amazon EC2 console, and then choose Instances from the navigation pane.
+Select the instance, and note the Instance ID from the Description tab.
+To view CloudTrail events and identify the user information associated with the instance launch, follow these steps:
+
+Open the CloudTrail console, and then choose Event history from the navigation pane.
+For Filter, choose Resource name from the dropdown menu.
+For Enter resource name, enter the instance ID.
+(Optional) For Time range, select a time range.
+In the list of results, look for RunInstances in the Event name column, and then select that result to expand the event details.
+Choose View event to view the event details, including information about who initiated the instance launch request.
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
